@@ -1,0 +1,26 @@
+12/Cho mảng 1 chiều các số nguyên. Viết hàm đệ quy xuất mảng.
+Giải:#include <iostream>
+using namespace std;
+
+void xuatMang(int arr[], int n, int index) {
+
+    if (index >= n) {
+        return;
+    }
+    
+   
+    cout << arr[index] << " ";
+    
+
+    xuatMang(arr, n, index + 1);
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int n = 5;
+
+    cout << "Mang: ";
+    xuatMang(arr, n, 0); // Gọi hàm đệ quy để xuất mảng
+
+    return 0;
+}
